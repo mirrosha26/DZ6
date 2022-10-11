@@ -6,4 +6,4 @@
 ## Задача №3
 - Решение задачи находится в файле [3.py](3.py)
 - Тестовые файлы в папке [example_3](example_3)
-- Объединенный файл создается по адресу  [return/answer.txt](return\answer.txt)
+- Объединенный файл создается по адресу  [return/answer.txt](return/answer.txt)
