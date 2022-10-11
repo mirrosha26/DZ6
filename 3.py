@@ -1,12 +1,16 @@
+import os
 
-files_list = ['example/1.txt', 'example/2.txt', 'example/3.txt']
+dir_path = 'example_3'
 size_dict = {}
-for path in files_list:
+for filename in os.listdir(dir_path):
+    path = os.path.join(dir_path, filename)
     with open(path, 'r', encoding='utf-8') as f:
         size_dict[path] = len(f.readlines())
 
-with open('out.txt', 'w+', encoding='utf-8') as file_out:
-    for i in files_list:
+return_dir_path = 'return'
+return_path = os.path.join(return_dir_path, 'answer.txt')
+with open(return_path, 'w', encoding='utf-8') as file_out:
+    for i in os.listdir(dir_path):
         path = min(size_dict, key=size_dict.get)
         size = size_dict[path]
         with open(path, 'r', encoding='utf-8') as file_read:

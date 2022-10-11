@@ -1,5 +1,9 @@
+import os
+dir_path = 'example_1-2'
+filename = 'test.txt'
+path = os.path.join(dir_path,filename)
 cook_book = {}
-with open("example/test.txt", "r", encoding="utf-8") as file:
+with open(path, "r", encoding="utf-8") as file:
     for line in file:
         dish = line.strip()
         dish_count = file.readline()
